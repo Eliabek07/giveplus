@@ -1,17 +1,28 @@
 import React, { ReactNode } from "react";
+import { StatusBar, StatusBarStyle } from 'expo-status-bar';
 import * as S from './styles';
 
 interface LayoutProps {
   children: ReactNode;
+  style?: StatusBarStyle;
+  backgroundColor?: string;
 }
 
 const Layout = ({
-  children
+  children,
+  style,
+  backgroundColor
 }: LayoutProps) => {
   return (
-    <S.Container>
-      {children}
-    </S.Container>
+    <>
+      <StatusBar 
+        style={style} 
+        backgroundColor={backgroundColor} 
+      />
+      <S.Container>
+        {children}
+      </S.Container>
+    </>
   );
 }
 
