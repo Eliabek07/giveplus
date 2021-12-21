@@ -20,5 +20,7 @@ export default {
     text: ''
   },
 
-  fonts: {}
+  fonts: {},
+
+  dimensions: {}
 }
