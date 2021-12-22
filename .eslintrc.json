@@ -58,7 +58,9 @@
     ],
     "react/require-default-props": "off",
     "import/prefer-default-export": "off",
-    "@typescript-eslint/no-empty-interface": "off"
+    "@typescript-eslint/no-empty-interface": "off",
+    "react/jsx-props-no-spreading": "off",
+    "camelcase": "off"
   },
   "settings": {
     "import/resolver": {

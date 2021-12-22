@@ -1,10 +1,35 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+
+import {
+  Roboto_400Regular,
+  Roboto_500Medium,
+  Roboto_700Bold,
+} from '@expo-google-fonts/roboto';
+
+import { Providers } from './src/app/components/Providers';
+import { Routes } from './src/app/routes';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <NavigationContainer>
+      <Providers>
+        <Routes />
+      </Providers>
+    </NavigationContainer>
   );
 }
+
+// export { default } from './storybook';

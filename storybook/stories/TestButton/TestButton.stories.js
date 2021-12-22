@@ -3,18 +3,13 @@ import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import { Text } from 'react-native';
-import Button from '.';
+import { Button } from '../../../src/components/Button';
 import CenterView from '../CenterView';
 
-storiesOf('Button', module)
+storiesOf('Test Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add('with text', () => (
+  .add('Test new button', () => (
     <Button onPress={action('clicked-text')}>
       <Text>{text('Button text', 'Hello Button')}</Text>
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onPress={action('clicked-emoji')}>
-      <Text>😀 😎 👍 💯</Text>
     </Button>
   ));
