@@ -1,12 +1,13 @@
 import React from 'react';
 import { Feather as IconFeather } from '@expo/vector-icons';
-
 import { useNavigation } from '@react-navigation/native';
+
 import * as S from './styles';
 
-import { Layout } from '../../app/components/Layout';
+import { Layout } from '../../components/Layout';
 import { Header } from '../../components/Header';
 import { IconButton } from '../../components/IconButton';
+import { ActiveLighthouseIcon } from '../../components/SVGs/ActiveLighthouseIcon';
 
 function Home(props) {
   return (
@@ -19,6 +20,7 @@ function Home(props) {
             </IconButton>
           }
           title="Home"
+          right={<ActiveLighthouseIcon width={26} height={26} />}
         />
       </S.Container>
     </Layout>
