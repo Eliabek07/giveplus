@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+
 import * as S from './styles';
 
 import { Layout } from '../../app/components/Layout';
 
-const Home = () => {
+function Home() {
   return (
     <Layout>
       <S.Container>

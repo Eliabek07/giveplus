@@ -1,20 +1,15 @@
-import React, { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
+import React, { ReactNode } from 'react';
 
-import theme from "../../styles/theme";
+import { ThemeProvider } from 'styled-components';
+
+import theme from '../../styles/theme';
 
 interface StylesProviderProps {
   children: ReactNode;
 }
 
-const StylesProvider = ({
-  children
-}: StylesProviderProps) => {
-  return (
-    <ThemeProvider theme={theme}>
-      {children}
-    </ThemeProvider>
-  );
+function StylesProvider({ children }: StylesProviderProps) {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 
-export { StylesProvider }
+export { StylesProvider };

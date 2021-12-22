@@ -1,19 +1,13 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
-import { StylesProvider } from "./StylesProvider"
+import { StylesProvider } from './StylesProvider';
 
 interface ProvidersProps {
   children: ReactNode;
 }
 
-const Providers = ({
-  children
-}: ProvidersProps) => {
-  return (
-    <StylesProvider>
-      {children}
-    </StylesProvider>
-  );
+function Providers({ children }: ProvidersProps) {
+  return <StylesProvider>{children}</StylesProvider>;
 }
 
-export { Providers }
+export { Providers };

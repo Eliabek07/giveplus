@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import Home from '../../pages/Home'
+import Home from '../../pages/Home';
 
-const Routes = () => {
-  return (
-    <Home />
-  );
+function Routes() {
+  return <Home />;
 }
 
-export { Routes }
+export { Routes };
