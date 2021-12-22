@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Home from '../../pages/Home';
+import { AppRoutes } from './app.routes';
 
 function Routes() {
-  return <Home />;
+  return <AppRoutes />;
 }
 
 export { Routes };
